@@ -1,0 +1,21 @@
+.square_btn {
+  display: inline-block;
+  position: absolute;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #1328e7;
+  border: solid 2px #1328e7;
+  border-radius: 3px;
+  transition: 0.4s;
+  margin-left: 90%;
+  margin-top: -5%;
+}
+
+.square_btn:hover {
+  background: #1328e7;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}

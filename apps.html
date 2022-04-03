@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      .thPointer {
+        cursor: pointer;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+
+      .square_btn {
+        display: inline-block;
+        position: absolute;
+        padding: 0.3em 1em;
+        text-decoration: none;
+        color: #1328e7;
+        border: solid 2px #1328e7;
+        border-radius: 3px;
+        transition: 0.4s;
+        margin-left: 87.8%;
+        margin-top: -2%;
+      }
+
+      .square_btn:hover {
+        background: #1328e7;
+        color: white;
+      }
+    </style>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <body>
+    <h2>List of all apps that can be manipulated with local IAP, or Flex</h2>
+
+    <h3>
+      You can click on "App" and "Developer" to filter everything in
+      alphabetical or reversed alphabetical order
+    </h3>
+
+    <h3>
+      Table explanation:
+      <br />
+      ❌- method is not available <br />
+      NT- Not Tested I try to test as many things as possible I will do my best
+      to update the list, also if local IAP is available I probably won't bother
+      with other methods until they patch local IAP
+    </h3>
+
+    <a href="tablejailbreak.html" class="square_btn">Games</a>
+
+    <table id="myTable2">
+      <tr>
+        <th onclick="sortTable(0)" class="thPointer">App</th>
+        <th onclick="sortTable(1)" class="thPointer">Developer</th>
+        <th>Tested Version</th>
+        <th>Local IAP</th>
+        <th>Flex</th>
+        <th>Note</th>
+      </tr>
+
+      <tr>
+        <td>2nd: Second Phone Number</td>
+        <td>Technology Product and Service</td>
+        <td>1.2.1</td>
+        <td>✔</td>
+        <td>NT</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Prequel: Photo & Videos Editor</td>
+        <td>Prequel Inc.</td>
+        <td>2.23.2</td>
+        <td>✔</td>
+        <td>NT</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>TravelBoast: My Journey Routes</td>
+        <td>ALEXSANDR KUZNETSOV</td>
+        <td>1.66</td>
+        <td>✔</td>
+        <td>NT</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Junk Cleaner for iPhone Clean</td>
+        <td>LUMOS, OOO</td>
+        <td>3.13</td>
+        <td>✔</td>
+        <td>NT</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Life Explorer-Master Your Life</td>
+        <td>XUNTONGWUXIAN</td>
+        <td>1.35</td>
+        <td>✔</td>
+        <td>NT</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>QR Code & Barcode Scanner</td>
+        <td>TeaCapps GmbH</td>
+        <td>2.4.4</td>
+        <td>✔</td>
+        <td>NT</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Smart Cleaner - Clean Storage</td>
+        <td>BP Mobile</td>
+        <td>4.33</td>
+        <td>✔</td>
+        <td>NT</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Citymapper: All Your Transport</td>
+        <td>Citymapper Limited</td>
+        <td>10.51.1</td>
+        <td>✔</td>
+        <td>NT</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Wild Journey - Nature Sounds</td>
+        <td>Wild Ventures</td>
+        <td>5.3</td>
+        <td>✔</td>
+        <td>NT</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Mondly: Learn 33 Languages</td>
+        <td>ATi Studios</td>
+        <td>9.18.0</td>
+        <td>✔</td>
+        <td>NT</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <script>
+      function sortTable(n) {
+        var table,
+          rows,
+          switching,
+          i,
+          x,
+          y,
+          shouldSwitch,
+          dir,
+          switchcount = 0;
+        table = document.getElementById("myTable2");
+        switching = true;
+        // Set the sorting direction to ascending:
+        dir = "asc";
+        /* Make a loop that will continue until
+        no switching has been done: */
+        while (switching) {
+          // Start by saying: no switching is done:
+          switching = false;
+          rows = table.rows;
+          /* Loop through all table rows (except the
+          first, which contains table headers): */
+          for (i = 1; i < rows.length - 1; i++) {
+            // Start by saying there should be no switching:
+            shouldSwitch = false;
+            /* Get the two elements you want to compare,
+            one from current row and one from the next: */
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            /* Check if the two rows should switch place,
+            based on the direction, asc or desc: */
+            if (dir == "asc") {
+              if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                // If so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+              }
+            } else if (dir == "desc") {
+              if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                // If so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+              }
+            }
+          }
+          if (shouldSwitch) {
+            /* If a switch has been marked, make the switch
+            and mark that a switch has been done: */
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            // Each time a switch is done, increase this count by 1:
+            switchcount++;
+          } else {
+            /* If no switching has been done AND the direction is "asc",
+            set the direction to "desc" and run the while loop again. */
+            if (switchcount == 0 && dir == "asc") {
+              dir = "desc";
+              switching = true;
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

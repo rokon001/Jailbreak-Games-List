@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      .thPointer {
+        cursor: pointer;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>
+      List of all games and apps that can be manipulated with local IAP, IGG (I
+      Game God) or Flex (only apps for now)
+    </h2>
+
+    <h3>
+      Please note I have put a checkmark on IGG just because local IAP is
+      available for these games, the only time where I test if IGG works is when
+      local IAP doesn't work <br />
+      <br />
+      You can click on "Game" and "Developer" to filter everything in
+      alphabetical or reversed alphabetical order
+    </h3>
+    <h3>
+      Table explanation:
+      <br />
+      ❌- method is not available <br />
+      ✔ - method is available <br />
+      <br />
+      Note - you can hover on each of the emojis below in case you forget what
+      they represent <br />
+      ☑ - local IAP is available but do not abuse it (don't purchase more than 3
+      times within 10-15 minutes) otherwise you will get banned
+      <br />
+      💥- (crash) app crashes when using local IAP but everything is applied
+      <br />
+      💲- subscription payments with local IAP don't work but individual
+      payments (gold, gems, coins, etc.) work
+    </h3>
+
+    <a href="apps.html" class="square_btn">Apps</a>
+
+    <table id="myTable2">
+      <tr>
+        <th onclick="sortTable(0)" class="thPointer">Game</th>
+        <th onclick="sortTable(1)" class="thPointer">Developer</th>
+        <th>Version Tested</th>
+        <th>Local IAP</th>
+        <th>IGG</th>
+        <th>Note</th>
+      </tr>
+
+      <tr>
+        <td>Epic Raft</td>
+        <td>Lightcore Ltd</td>
+        <td>2.6.3</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Magic Arena: Battle Royale</td>
+        <td>Tap Anywhere Sp</td>
+        <td>0.7.13</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Boom Slingers</td>
+        <td>Boom Corp Oy</td>
+        <td>2.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Logo Quiz 2022: Guess The Logo</td>
+        <td>Peter Skarheim</td>
+        <td>9.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>My Friend Pedro</td>
+        <td>Devolver Digital</td>
+        <td>1.12</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Soccer Royale Clash Football</td>
+        <td>VIVA GAMES S.L.</td>
+        <td>1.9.9</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Shadow Knights : Idle RPG</td>
+        <td>cookapps</td>
+        <td>43</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Mine Tap</td>
+        <td>GIKI KHAUS</td>
+        <td>1.3.9</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Survival RPG: Open World Pixel</td>
+        <td>Eric Bouchard</td>
+        <td>1.2.5</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Beam Of Magic</td>
+        <td>Zillion Whales Ltd</td>
+        <td>1.14</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Empire Warriors: Offline RPG</td>
+        <td>Zitga</td>
+        <td>2.4.35</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>My Factory Tycoon - Idle Game</td>
+        <td>STORMX</td>
+        <td>1.5.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>
+          <div class="tooltip">
+            💥
+            <span class="tooltiptext">
+              app crashes when using LIAP but everything is applied</span
+            >
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Conquer The Tower</td>
+        <td>ZHANG HONGKUN</td>
+        <td>1.5</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Conquer The Tower 2</td>
+        <td>ZHANG HONGKUN</td>
+        <td>1.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Flags of the World Best Trivia</td>
+        <td>GEDEV OYUN YAZILIM VE PAZARLAMA ANONIM SIRKETI</td>
+        <td>1.8.50</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Digfender</td>
+        <td>Mugshot Games Pty Ltd</td>
+        <td>1.4.6</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Egg inc.</td>
+        <td>Auxbrain, Inc.</td>
+        <td>1.22.8</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>
+          <div class="tooltip">
+            💥
+            <span class="tooltiptext">
+              app crashes when using LIAP but everything is applied</span
+            >
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Jackal Squad: Classic Shooting</td>
+        <td>ROCKET GO GLOBAL PTE. LTD.</td>
+        <td>1.0008</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Rapstar - Rapper Simulator</td>
+        <td>zonyagames</td>
+        <td>?</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Space Rover: Idle Mars Tycoon</td>
+        <td>Mamboo Games</td>
+        <td>1.8</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Rodeo Stampede: Sky Zoo Safari</td>
+        <td>FeatherWeight Games Pty Limited</td>
+        <td>1.57.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Tower Defense: King of Legend</td>
+        <td>Pham Quang</td>
+        <td>1.1.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Dash Quest 2</td>
+        <td>Tiny Titan Studios</td>
+        <td>1.4.04</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Clicker Cats - RPG Idle Heroes</td>
+        <td>Platonic Games</td>
+        <td>1.1.5</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Empire Defender: Offline Games</td>
+        <td>Zitga</td>
+        <td>2.4.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Life Choices: Simulation Game</td>
+        <td>UNICO STUDIO LLC</td>
+        <td>1.1.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Grand Mountain Adventure</td>
+        <td>Toppluva AB</td>
+        <td>1.200</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Jetpack Joyride</td>
+        <td>Halfbrick</td>
+        <td>1.62.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Sky Bandit</td>
+        <td>Macaca Games Inc.</td>
+        <td>1.2.4</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Bee Factory</td>
+        <td>Green Panda Games</td>
+        <td>1.30.6</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>PAKO 3</td>
+        <td>Tree Men Games</td>
+        <td>1.0.4</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>PAKO Caravan</td>
+        <td>Tree Men Games</td>
+        <td>1.2.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>PAKO Forever</td>
+        <td>Tree Men Games</td>
+        <td>1.2.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Doodle Jump - Insanely Good</td>
+        <td>Lima Sky</td>
+        <td>2.78.8</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Stick Hero</td>
+        <td>Ketchapp</td>
+        <td>2.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Don't Touch The Spikes</td>
+        <td>Ketchapp</td>
+        <td>2.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Circle</td>
+        <td>Ketchapp</td>
+        <td>1.8</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Dunk Shot</td>
+        <td>Ketchapp</td>
+        <td>1.5.7</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Rider</td>
+        <td>Ketchapp</td>
+        <td>1.4.5</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>The Ramp.</td>
+        <td>Crescent Moon Games LLC</td>
+        <td>1.04</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Traffic Rider</td>
+        <td>Soner Kara</td>
+        <td>1.71</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Highway Rider</td>
+        <td>Battery Acid Games</td>
+        <td>2.4.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>MetroLand - Endless Runner</td>
+        <td>Kiloo</td>
+        <td>1.12.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Flags of All World Countries</td>
+        <td>Andrey Solovyev</td>
+        <td>2.4.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Totally Reliable Delivery</td>
+        <td>TINYBUILD LLC</td>
+        <td>1.4</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Merge Magic!</td>
+        <td>Gram Games Limited</td>
+        <td>4.4.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Idle Farming Empire</td>
+        <td>Futureplay</td>
+        <td>1.42.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Pixel Car Racer</td>
+        <td>STUDIO FURUKAWA, LLC</td>
+        <td>1.1.80</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>
+          <div class="tooltip">
+            💥
+            <span class="tooltiptext">
+              app crashes when using LIAP but everything is applied</span
+            >
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Logo Quiz</td>
+        <td>Mateusz Klaczak</td>
+        <td>2.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Sling Kong</td>
+        <td>Protostar</td>
+        <td>3.25.21</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Temple Run: Classic</td>
+        <td>Imangi Studios, LLC</td>
+        <td>1.19.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Temple Run 2</td>
+        <td>Imangi Studios, LLC</td>
+        <td>1.87.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Tiny Cars: Fast Game</td>
+        <td>HOMA GAMES</td>
+        <td>2.5.10</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Smash Hit</td>
+        <td>Mediocre AB</td>
+        <td>1.4.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Fastlane Fun Car Racing Arcade</td>
+        <td>Space Ape Ltd</td>
+        <td>1.48.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Tides: A Fishing Game</td>
+        <td>Shallot Games, LLC.</td>
+        <td>1.3.5</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Apple Knight</td>
+        <td>Limitless LLC</td>
+        <td>2.2.7</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Ice League Hockey</td>
+        <td>Koality Game LLC</td>
+        <td>1.04</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Trivia Star: Trivia Games Quiz</td>
+        <td>Super Lucky Games LLC</td>
+        <td>1.177</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>King of Crabs</td>
+        <td>Robot Squid Ltd</td>
+        <td>1.15.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Cut the Rope</td>
+        <td>ZeptoLab</td>
+        <td>3.33.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>
+          <div class="tooltip">
+            💲
+            <span class="tooltiptext">
+              subscription payments with LIAP don't work but individual payments
+              work</span
+            >
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>#DRIVE</td>
+        <td>Pixel Perfect Dude</td>
+        <td>2.2.42</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Tiny Island Survival</td>
+        <td>GAME START</td>
+        <td>1.0.18</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Banana Kong Blast</td>
+        <td>FDG Mobile Games GbR</td>
+        <td>?</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>OneBit Adventure</td>
+        <td>Jonathan Concepcion-Rodriguez</td>
+        <td>1.3.14</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Otherworld Legends</td>
+        <td>ChillyRoom</td>
+        <td>1.11.5</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Mad Skills Motocross 3</td>
+        <td>Turborilla</td>
+        <td>1.5.6</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Soul Knight</td>
+        <td>Zeyang Li</td>
+        <td>4.0.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Laser Overload: Electric Joy</td>
+        <td>WebAvenue Unipessoal Lda</td>
+        <td>1.5.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Blackbox - a clever brain game</td>
+        <td>Grow Pixel</td>
+        <td>2.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Sprint RPG</td>
+        <td>Nitrome</td>
+        <td>1.1.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Fun Escape Room: Logic Puzzles</td>
+        <td>Webelinx DOO</td>
+        <td>1.0.20</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Lemmings: The Puzzle Adventure</td>
+        <td>SAD PUPPY LIMITED</td>
+        <td>6.32</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>
+          <div class="tooltip">
+            💲
+            <span class="tooltiptext">
+              subscription payments with LIAP don't work but individual payments
+              work</span
+            >
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Missile Command: Recharged</td>
+        <td>Atari, Interactive</td>
+        <td>62</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Sports City Tycoon: Idle Game</td>
+        <td>Pixodust Aplicativos LTDA</td>
+        <td>1.20.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Idle Industries</td>
+        <td>Tapinator, Inc.</td>
+        <td>1.3.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>OCO</td>
+        <td>SPECTRUM58 LIMITED</td>
+        <td>1.5147</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Astalo</td>
+        <td>Tree Men Games</td>
+        <td>1.0.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>HELI 100</td>
+        <td>Tree Men Games</td>
+        <td>1.0.3</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Idle Monster TD Evolved</td>
+        <td>Swell Games LLC</td>
+        <td>31</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>
+          <div class="tooltip">
+            ☑
+            <span class="tooltiptext">
+              LIAP is available but do not abuse it otherwise you will get
+              banned</span
+            >
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Idle King Tycoon Tap Games</td>
+        <td>Motap UG</td>
+        <td>2.0.9</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Combat Magic: Spells & Swords</td>
+        <td>Leonid Burylov</td>
+        <td>1.02</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Gladiator Heroes</td>
+        <td>VIVA GAMES S.L.</td>
+        <td>3.4.5</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>
+          <div class="tooltip">
+            💥
+            <span class="tooltiptext">
+              app crashes when using LIAP but everything is applied</span
+            >
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Zombie Hunter: FPS Sniper Game</td>
+        <td>VIVA GAMES S.L.</td>
+        <td>3.0.25</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Run Forrest Run -Official Game</td>
+        <td>VIVA GAMES S.L.</td>
+        <td>1.9.6</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Idle Fish Inc Tycoon Game</td>
+        <td>VIVA GAMES S.L.</td>
+        <td>?</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Tap Dragons - Clicker Heroes RPG Game</td>
+        <td>VIVA GAMES S.L.</td>
+        <td>?</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>War and Defense</td>
+        <td>Vladimir Seporov</td>
+        <td>?</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Pico Islands</td>
+        <td>BitSpree GmbH</td>
+        <td>21.07.81</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Idle Magic Academy</td>
+        <td>Longames TEC</td>
+        <td>2.0</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Warring Summoner's Greed</td>
+        <td>Hien Hoang</td>
+        <td>1.2.4</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Sqube Darkness</td>
+        <td>UNICO STUDIO LLC</td>
+        <td>1.1.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Tower Defense: Toy War</td>
+        <td>Pham Quang</td>
+        <td>2.0.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Tower Defense: The Last Realm</td>
+        <td>Pham Quang</td>
+        <td>1.3.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Stickman Legends Offline Games</td>
+        <td>Zitga</td>
+        <td>2.6.3</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Cyber Fighter: Cyber Ninja RPG</td>
+        <td>Zitga</td>
+        <td>1.11.66</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Foodpia Tycoon</td>
+        <td>STORMX</td>
+        <td>1.3.23</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Merge Chicken - Idle Tycoon</td>
+        <td>STORMX</td>
+        <td>1.4.5</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>
+          <div class="tooltip">
+            💥
+            <span class="tooltiptext">
+              app crashes when using LIAP but everything is applied</span
+            >
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>My Egg Tycoon</td>
+        <td>STORMX</td>
+        <td>1.7.2</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>
+          <div class="tooltip">
+            💥
+            <span class="tooltiptext">
+              app crashes when using LIAP but everything is applied</span
+            >
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Popo's Mine</td>
+        <td>STORMX</td>
+        <td>1.4.5</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>
+          <div class="tooltip">
+            💥
+            <span class="tooltiptext">
+              app crashes when using LIAP but everything is applied</span
+            >
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>The Zombie Realm</td>
+        <td>Pham Quang</td>
+        <td>1.2.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Idle Green Button - Clicker</td>
+        <td>Mamboo Games</td>
+        <td>3.1</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Stickman Smasher: Clash3D game</td>
+        <td>ROCKET GO GLOBAL PTE. LTD.</td>
+        <td>1.3</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Billion Builders</td>
+        <td>Mamboo Games</td>
+        <td>4.5</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Metal Shooter: Run and Gun</td>
+        <td>ROCKET GO GLOBAL PTE. LTD.</td>
+        <td>1.16</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <script>
+      function sortTable(n) {
+        var table,
+          rows,
+          switching,
+          i,
+          x,
+          y,
+          shouldSwitch,
+          dir,
+          switchcount = 0;
+        table = document.getElementById("myTable2");
+        switching = true;
+        // Set the sorting direction to ascending:
+        dir = "asc";
+        /* Make a loop that will continue until
+        no switching has been done: */
+        while (switching) {
+          // Start by saying: no switching is done:
+          switching = false;
+          rows = table.rows;
+          /* Loop through all table rows (except the
+          first, which contains table headers): */
+          for (i = 1; i < rows.length - 1; i++) {
+            // Start by saying there should be no switching:
+            shouldSwitch = false;
+            /* Get the two elements you want to compare,
+            one from current row and one from the next: */
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            /* Check if the two rows should switch place,
+            based on the direction, asc or desc: */
+            if (dir == "asc") {
+              if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                // If so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+              }
+            } else if (dir == "desc") {
+              if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                // If so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+              }
+            }
+          }
+          if (shouldSwitch) {
+            /* If a switch has been marked, make the switch
+            and mark that a switch has been done: */
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            // Each time a switch is done, increase this count by 1:
+            switchcount++;
+          } else {
+            /* If no switching has been done AND the direction is "asc",
+            set the direction to "desc" and run the while loop again. */
+            if (switchcount == 0 && dir == "asc") {
+              dir = "desc";
+              switching = true;
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
